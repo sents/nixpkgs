@@ -2,7 +2,12 @@
 
 With declarative package management, you specify which packages you want
 on your system by setting the option
-[](#opt-environment.systemPackages). For instance, adding the
+[](#opt-environment.systemPackages).
+The content of the these packages gets made available at `/run/current-system/sw`.
+The most commonly needed paths (`/bin`, `/sbin`, `/lib` `/etc/xdg`) of the packages are linked by default and
+additional paths can be configured using `environment.pathsToLink`.
+
+For instance, adding the
 following line to `configuration.nix` enables the Mozilla Thunderbird
 email application:
 
